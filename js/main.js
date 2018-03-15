@@ -21,7 +21,7 @@ function initMap() {
   });
 }
 
-}
+
 
 (function() {
     'use strict';
