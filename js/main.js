@@ -21,7 +21,7 @@ function initMap() {
   });
 }
 
-// }
+}
 
 (function() {
     'use strict';
@@ -30,7 +30,6 @@ function initMap() {
     document.addEventListener('DOMContentLoaded', function() {
 
         //Campos datos usuarios
-
         var nombre = document.getElementById('nombre');
         var apellido = document.getElementById('apellido');
         var email = document.getElementById('email');
