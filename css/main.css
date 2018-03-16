@@ -205,6 +205,46 @@ ul {
     }
 }
 
+/* Lettering */
+
+h1.nombre-sitio span {
+    position: relative;
+    text-shadow: 0 0 30px black;
+}
+
+@media only screen and (min-width:992px){
+    .char1{
+        top:10px;
+    }
+    .char2{
+        top:0px;
+    }
+    .char3{
+        top:-5px;
+    }
+    .char4{
+        top:10px;
+    }
+    .char5{
+        top:0px;
+    }
+    .char6{
+        top:10px;
+    }
+    .char7{
+        top:-5px;
+    }
+    .char8{
+        top:10px;
+    }
+    .char9{
+        top:0px;
+    }
+    .char10{
+        top:-5px;
+    }
+}
+
 /* Header */
 
 div.hero {
