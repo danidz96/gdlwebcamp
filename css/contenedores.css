@@ -1,0 +1,272 @@
+/** BACKGROUNDS**/
+
+body {
+  background: gray;
+}
+.contenedor {
+  background: white;
+}
+header {
+  background: orange
+}
+nav {
+  background: purple;
+}
+table {
+  background: cyan;
+}
+footer {
+  background: orange;
+}
+footer nav {
+  background: transparent;
+}
+/** Anchos y Altos **/
+.contenedor {
+  width: 1000px;
+}
+nav {
+  height:80px;
+}
+table {
+  width:300px;
+}
+img.logocss3 {
+  width: 90px;
+}
+/** Margenes **/
+.contenedor {
+   margin: 0px auto;
+
+}
+header {
+  margin: 0px 0px 30px;
+}
+h2 {
+  margin-bottom:30px;
+}
+table {
+  margin: 0px 0px 30px 30px;
+}
+footer {
+  margin-top: 30px;
+}
+/*** Padding**/
+header {
+  padding-top:20px;
+  padding-bottom: 20px;
+
+}
+
+nav {
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+nav ul {
+  padding:0;
+}
+table tr td{
+  padding-top:5px;
+  padding-bottom: 5px;
+}
+footer {
+  padding-top: 20px;
+}
+
+/** Previniendo Margin collpase**/
+/*
+table {
+  margin-bottom: 100px;
+}
+*/
+/**
+.contenedor {
+  overflow: hidden;
+}
+*/
+/*
+.contenedor {
+   border-bottom: 1px solid black;
+}
+
+*/
+/*
+.contenedor {
+  padding: 1px;
+}
+*/
+/*
+table {
+  display: inline-block;
+}
+*/
+
+.contenedor {
+  padding-bottom: 30px;
+
+}
+
+div.contenedor {
+  padding-bottom: 30px;
+   margin-bottom: 140px;
+}
+
+
+/** Box Model **/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+section#introduccion{
+  width: 400px;
+  background-color: yellow;
+  padding:30px;
+}
+section#cursos {
+  width: 400px;
+  background-color: orange;
+  border: 30px solid black;
+  padding: 30px;
+}
+
+/** Borders **/
+
+section#cursos {
+   border-top: 30px;
+   border-style: dashed;
+   border-color:orange;
+}
+
+section#cursos {
+   border-top: 30px;
+   border-style: dotted; /* dashed, double **/
+}
+section#cursos{
+  border: 30px dotted black;
+}
+
+/* FLOATS **/
+/*
+section#cursos {
+  float: right;
+}
+table {
+  float: right;
+}
+*/
+
+}
+main.contenido-principal {
+  width: 700px;
+  float: left;
+
+  }
+aside {
+  width: 300px;
+  float: right;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+section#cursos {
+  width: 100%;
+}
+table {
+ margin:0;
+}
+#navegacion ul  {
+  list-style: none;
+}
+#navegacion ul li {
+  float: left;
+  margin-right: 20px;
+}
+
+#navegacion ul li a {
+  color: #ffffff;
+}
+
+/**    POSITION RELATIVE Y ABSOLUTE */
+header {
+  position: fixed;
+  left:0;
+  width: 100%;
+}
+.rojo {
+  background-color: red;
+}
+.azul {
+  background-color: blue;
+}
+
+div.padre {
+  width:400px;
+  /* width:100%;**/
+  height: 400px;
+  position: relative;
+}
+
+/** DISPLAY   **/
+
+section#introduccion {
+  display: none;
+  display: block;
+}
+.noticia h3 {
+  background-color: red;
+  display: block;
+}
+.noticia .escrito {
+  background-color: yellow;
+}
+#noticias a {
+  background-color: orange;
+}
+.noticia h3,
+.noticia .escrito {
+  display: inline;
+}
+/** con inline no se le puede dar un ancho*/
+.noticia h3 {
+  display: inline;
+  width: 100%;
+}
+/** con inline-block si se le puede dar un ancho*/
+.noticia h3 {
+  display: inline-block;
+  width: 100%;
+}
+/**** Centrando con display table**/
+.gran-promocion {
+  display: table;
+  width: 100%;
+  background-color: yellow;
+  margin-top: 20px;
+  height: 200px;
+}
+.texto-promocion {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/** BORDER RADIUS:   **/
+.gran-promocion{
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 40px;
+  width: 80%;
+  margin:20px auto 0 auto;
+}
+
+.gran-promocion {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+}

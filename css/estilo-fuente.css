@@ -1,0 +1,88 @@
+/* Font Family */
+body {
+  font-family: Arial, Helvetica, serif;
+}
+h2 {
+  font-family: Verdana, Geneva, sans-serif;
+}
+h3 {
+  font-family: 'Times New Roman', serif;,
+}
+p {
+  font-family: Geneva, Helvetica, sans-serif;
+}
+
+/** Font Size **/
+h2 {
+  font-size: 28px;
+  font-size: 2.8rem;
+  font-size: 3em;
+}
+p {
+  font-size: 18px;
+}
+a {
+  font-size: 20px;
+}
+
+/** TEXT TRANSFORM **/
+#titulo {
+  text-transform: uppercase;
+}
+#introduccion p {
+  text-transform: capitalize;
+}
+
+#introduccion p span {
+  text-transform: lowercase;;
+}
+
+/** FONT VARIANT **/
+#titulo {
+  text-transform: none;
+  font-variant: small-caps;
+}
+#introduccion p {
+  font-variant: small-caps;
+}
+
+/** Text Decoration **/
+
+#navegacion ul li a {
+  text-decoration: none;
+}
+p.mensaje span {
+  text-decoration: underline;
+}
+p.oferta span {
+  text-decoration: line-through;
+}
+/** Font Weight **/
+#titulo {
+  font-weight: normal;
+}
+p {
+  font-weight: lighter;
+}
+
+/*** line height **/
+div.noticia p {
+  line-height: 40px;
+}
+div.oferta {
+  height:80px;
+  background-color: red;
+}
+div.oferta {
+  line-height: 80px;
+}
+
+/** Font **/
+
+/*
+font: [ <font-style> || <font-variant> || <font-weight> ]? <font-size> [ / <line-height> ]? <font-family>
+*/
+
+#titulo {
+  font: italic small-caps normal 30px/30px arial;
+}

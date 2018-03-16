@@ -1,0 +1,148 @@
+/** Seleccionando IDS*/
+#titulo {
+  color:red;
+}
+/* Seleccionado Clases */
+.azul {
+  color:blue;
+}
+
+/* Seleccionado Ids y Clases */
+#titulo.titulo {
+  font-size: 30px;
+}
+.titulo {
+  font-size: 60px;
+}
+/*Seleccionando 2 clases **/
+.titulo.azul {
+  color:red;
+  font-size:100px;
+}
+/*Seleccionando Etiquetas **/
+p {
+  color: brown;
+}
+h3 {
+  color:green;
+}
+img {
+  width:300px;
+  float:right;
+}
+
+/*Seleccionando Etiquetas y ID`S **/
+h2#titulo {
+  color:orange;
+}
+img#logo {
+  float:none;
+}
+/*Seleccionando Etiquetas y clases **/
+section.seccion {
+  background: orange;
+}
+img.logo {
+  margin-top:20px;
+}
+
+/*Seleccionando elemento Universal **/
+/*
+* {
+  color:red!important;
+  font-size:20px!important;
+}
+*/
+#listado-cursos * {
+  color:green;
+}
+div.noticia *{
+  font-size:20px;
+}
+/*Seleccionando elementos en grupo**/
+
+h2, h3, p {
+  text-transform: uppercase;
+}
+h2, h3 {
+  text-align: center;
+}
+/** Seleccionando descendientes **/
+#navegacion {
+  background-color: orange;
+}
+#navegacion ul {
+  list-style:none;
+}
+#navegacion ul li {
+  display: inline;
+}
+
+/** Seleccionando hijos **/
+
+#listado-cursos > li {
+  color:white;
+}
+#listado-cursos li ul > li {
+  color:red;
+}
+/** Selector Adyacente **/
+
+#listado-cursos + p {
+  font-size: 30px;
+  text-align: center;
+}
+
+/** Selector para enlace **/
+a[href*="google.com"]{
+  background-color: red;
+}
+a[href*="facebook.com"]{
+  background-color: green;
+}
+/** Seleccionando Atributos **/
+/*
+[class="seccion"] {
+  background-color: red!important;
+}
+*/
+img[id="logo"] {
+  margin-top: 100px;
+}
+
+
+/***  Pseudo Classes **/
+a:focus,
+a:visited,
+a:active {
+  color:black;
+}
+#navegacion ul li a {
+  color:white;
+}
+div.menu ul li a:hover {
+  color: purple;
+}
+#navegacion ul li:first-child a {
+  text-decoration:none;
+}
+/** NTH-CHILD **/
+footer .menu nav ul li:nth-child(1) a {
+  background-color: red;
+}
+footer .menu nav ul li:nth-child(2) a {
+  background-color: blue;
+}
+footer .menu nav ul li:nth-child(3) a {
+  background-color: purple;
+}
+footer .menu nav ul li:nth-child(4) a {
+  background-color: orange;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: orange;
+}
+table tbody tr:nth-child(even) {
+  background-color: purple;
+}
