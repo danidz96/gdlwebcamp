@@ -187,10 +187,16 @@ $(function(){
       }else{
         $('.barra').removeClass('fixed');
         $('body').css({
-          'margin-top': 0 +'px'
+          'margin-top': '0px'
         });
       }
     
+  });
+
+  //Menú Responsive
+
+  $('.menu-movil').on('click', function(){
+    $('.navegacion-principal').slideToggle();
   });
 
   //Programa conferencias
