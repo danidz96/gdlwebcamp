@@ -171,6 +171,15 @@ $(function(){
 
   $('.nombre-sitio').lettering();
 
+  // Menú fijo
+
+  $(window).scroll(function(){
+    var scroll = $(window).scrollTop();
+
+    console.log(scroll);
+    
+  });
+
   //Programa conferencias
   $('.programa-evento .info-curso:first').show();
   $('.menu-programa a:first').addClass('activo');

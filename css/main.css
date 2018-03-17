@@ -903,6 +903,26 @@ footer.site-footer p.copyright {
 
 /** Internas **/
 
+/*Conferencia */
+body.conferencia .navegacion-principal .activo{
+    border-bottom: 2px solid #fe4918;
+}
+@media only screen and (min-width:1440px) {
+    div.galeria {
+margin-left: 7%;
+    }
+div.galeria a{
+    margin-bottom: 5px;
+    float: left;
+    padding: 30px;
+}
+}
+
+div.galeria a{
+    margin-bottom: 5px;
+    display: inline-block;  
+}
+
 /*Registro*/
 
 form.registro h3 {
