@@ -184,7 +184,7 @@ ul {
 .contenedor {
     width: 100%;
     margin: 0 auto;
-    padding-bottom: 30px
+
 }
 
 @media only screen and (min-width:480px) {
@@ -202,6 +202,7 @@ ul {
 @media only screen and (min-width:992px) {
     .contenedor {
         width: 80%;
+        
     }
 }
 
@@ -340,6 +341,15 @@ h1.nombre-sitio {
 div.barra {
     background-color: #353535;
     padding: 20px 0;
+    
+}
+
+.fixed{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
 }
 
 div.logo {
@@ -401,13 +411,13 @@ nav.navegacion-principal a:last-child:hover {
         width: 66.6%;
         float: right;
         text-align: right;
-        display: inline;
+        
+        margin-top: 15px;
     }
     nav.navegacion-principal a {
         margin-right: 15px;
         padding: 5px 10px;
         display: inline-block;
-        margin-top: 15px;
         width: auto;
         text-align: center;
     }
