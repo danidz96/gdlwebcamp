@@ -53,7 +53,7 @@ function initMap() {
         var camisas = document.getElementById('camisa_evento');
         var etiquetas = document.getElementById('etiquetas');
 
-
+        if(document.getElementById('calcular')){
         calcular.addEventListener('click', calcularTotal);
         pase_dia.addEventListener('blur', mostrarDias);
         pase_dosdias.addEventListener('blur', mostrarDias);
@@ -74,7 +74,8 @@ function initMap() {
         apellido.addEventListener('blur', validarCampos);
         email.addEventListener('blur', validarCampos);
         email.addEventListener('blur', validarMail);
-
+      }
+          
 
         function validarCampos(){
           if (this.value == '') {
@@ -213,10 +214,17 @@ $(function(){
 
   //Animaciones numeros
 
+  var resumenLista = $('.resumen-evento');
+  if (resumenLista.length > 0){
+    $('.resumen-evento').waypoint(function(){
   $('.resumen-evento li:nth-child(1) p').animateNumber({number: 6}, 1200);
   $('.resumen-evento li:nth-child(2) p').animateNumber({number: 15}, 1300);
   $('.resumen-evento li:nth-child(3) p').animateNumber({number: 3}, 1400);
   $('.resumen-evento li:nth-child(4) p').animateNumber({number: 9}, 1500);
+    }, {
+      offset: '60%'
+    });
+  }  
 
   // Cuenta atrás
 
