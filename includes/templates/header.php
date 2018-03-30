@@ -54,6 +54,7 @@
     <div class="barra">
         <div class="contenedor clearfix">
             <div class="logo">
+              <a href="index.php"></a>
                 <img src="img/logo.svg" alt="logo">
             </div>
             <div class="menu-movil ">
