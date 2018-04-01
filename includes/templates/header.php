@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -54,8 +54,9 @@
     <div class="barra">
         <div class="contenedor clearfix">
             <div class="logo">
-              <a href="index.php"></a>
+              <a href="index.php">
                 <img src="img/logo.svg" alt="logo">
+                </a>
             </div>
             <div class="menu-movil ">
                 <span></span>
