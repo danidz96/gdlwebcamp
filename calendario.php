@@ -27,15 +27,13 @@
                   'categoria' => $eventos['cat_evento'],
                   'invitado' => $eventos['nombre_invitado'] . " " . $eventos['apellido_invitado']);
 
-                $calendario[] = $evento;
+                $calendario[$eventos['fecha_evento']][] = $evento;
                 ?>
-                <pre>
-                  <?php var_dump($calendario); ?>
-                </pre>
-
-
             <?php } ?>
 
+            <pre>
+              <?php var_dump($calendario); ?>
+            </pre>
 
         </div>
         <?php
