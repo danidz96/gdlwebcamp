@@ -15,9 +15,20 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
     <link <link href="https://fonts.googleapis.com/css?family=Anton|Open+Sans|Oswald|PT+Sans|Roboto" rel="stylesheet">
+
+    <?php
+      $archivo = basename($_SERVER['PHP_SELF']);
+      $pagina = str_replace(".php", "", $archivo);
+      if ($pagina == 'invitados') {
+        echo '<link rel="stylesheet" href="css/colorbox.css">';
+      }else if ($pagina == 'conferencia'){
+        echo '<link rel="stylesheet" href="css/lightbox.css">';
+      }
+     ?>
+
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/lightbox.css">
-    <link rel="stylesheet" href="css/colorbox.css">
+
+
 
 </head>
 
