@@ -332,7 +332,7 @@ h1.nombre-sitio {
         margin: 0;
     }
     .seccion {
-        padding: 30 0 0 0;
+        padding: 0 0 30px 0;
     }
 }
 
