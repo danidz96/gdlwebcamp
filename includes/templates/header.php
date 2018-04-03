@@ -17,6 +17,7 @@
     <link <link href="https://fonts.googleapis.com/css?family=Anton|Open+Sans|Oswald|PT+Sans|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="css/colorbox.css">
 
 </head>
 

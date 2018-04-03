@@ -75,7 +75,7 @@ function initMap() {
         email.addEventListener('blur', validarCampos);
         email.addEventListener('blur', validarMail);
       }
-          
+
 
         function validarCampos(){
           if (this.value == '') {
@@ -191,7 +191,7 @@ $(function(){
           'margin-top': '0px'
         });
       }
-    
+
   });
 
   //Menú Responsive
@@ -224,7 +224,7 @@ $(function(){
     }, {
       offset: '60%'
     });
-  }  
+  }
 
   // Cuenta atrás
 
@@ -234,5 +234,9 @@ $(function(){
     $('#minutos').html(event.strftime('%M'));
     $('#segundos').html(event.strftime('%S'));
   });
+
+  //colorbox
+
+$('.invitado-info').colorbox({inline:true, width:"50%"});
 
 });
