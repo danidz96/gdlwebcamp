@@ -7,19 +7,30 @@
         <?php
         try {
           require_once('includes/funciones/bd_conexion.php');
-          $sql = "SELECT id_evento, nombre_evento, fecha_evento, hora_evento, cat_evento, icono, nombre_invitado, apellido_invitado FROM eventos
-          INNER JOIN categoria_evento ON eventos.id_cat_evento = categoria_evento.id_categoria INNER JOIN invitados ON eventos.id_inv = invitados.id_invitado ORDER BY id_evento";
+          $sql = "SELECT * FROM invitados";
           $resultado = $db->query($sql);
         } catch (\Exception $e) {
           echo $e->getMessage();
         }
 
          ?>
-
-
-        <?php
-        $db->close();
-        ?>
+          <section class="invitados contenedor seccion">
+           <h2>Nuestros invitados</h2>
+           <ul class="lista-invitados clearfix">
+           <?php while($invitados = $resultado->fetch_assoc()) {?>
+             <li>
+               <div class="invitado">
+                  <img src="img/<?php echo $invitados['url_imagen'] ?>" alt="imagen invitado">
+                  <p><?php echo $invitados['nombre_invitado'] . ' ' . $invitados['apellido_invitado']; ?></p>
+                </div>
+              </li>
+           <?php } ?>
+          </ul>
+          </section>
+        </div>
+         <?php
+         $db->close();
+         ?>
 
     </section>
 
