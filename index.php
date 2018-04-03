@@ -80,47 +80,7 @@
     </section>
     <!--.programa-->
 
-    <section class="invitados contenedor seccion">
-        <h2>Nuestros invitados</h2>
-        <ul class="lista-invitados clearfix">
-            <li>
-                <div class="invitado">
-                    <img src="img/Screenshot_12.png" alt="imagen invitado">
-                    <p>Rafael Bautista</p>
-                </div>
-            </li>
-            <li>
-                <div class="invitado">
-                    <img src="img/Screenshot_1.png" alt="imagen invitado">
-                    <p>Shari Herrera</p>
-                </div>
-            </li>
-            <li>
-                <div class="invitado">
-                    <img src="img/Screenshot_2.png" alt="imagen invitado">
-                    <p>Gregorio Sanchez</p>
-                </div>
-            </li>
-            <li>
-                <div class="invitado">
-                    <img src="img/Screenshot_3.png" alt="imagen invitado">
-                    <p>Carlos Martinez</p>
-                </div>
-            </li>
-            <li>
-                <div class="invitado">
-                    <img src="img/Screenshot_5.png" alt="imagen invitado">
-                    <p>Harold Garcia</p>
-                </div>
-            </li>
-            <li>
-                <div class="invitado">
-                    <img src="img/Screenshot_4.png" alt="imagen invitado">
-                    <p>Susan Sanchez</p>
-                </div>
-            </li>
-        </ul>
-    </section>
+      <?php include_once 'includes/templates/invitados.php' ?>
 
     <div class="contador parallax">
         <div class="contenedor">
@@ -250,7 +210,3 @@
     </section>
 
     <?php include_once 'includes/templates/footer.php' ?>
-    
-</body>
-
-</html>
