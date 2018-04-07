@@ -21,7 +21,7 @@ function initMap() {
         content: contenido
     });
     marker.addListener('click', function() {
-        informacion.open(map, marker)
+        informacion.open(map, marker);
     });
 }
 
@@ -51,6 +51,8 @@ function initMap() {
         var botonRegistro = document.getElementById('btnRegistro');
         var lista_productos = document.getElementById('lista-productos');
         var suma = document.getElementById('suma-total');
+
+         botonRegistro.disabled = true;
 
         //Extras
 
@@ -91,7 +93,7 @@ function initMap() {
                 errorDiv.style.display = 'none';
                 this.style.border = '1px solid  #cccccc';
             }
-        };
+        }
 
         function validarMail() {
             if (this.value.indexOf('@') > -1) {
@@ -116,7 +118,7 @@ function initMap() {
                     cantCamisas = camisas.value,
                     cantEtiquetas = etiquetas.value;
 
-                var totalPagar = (entradaDia * 30) + (entrada2dias * 45) + (entradaCompleto * 50) + (cantCamisas * 10) * .93 + (cantEtiquetas * 2);
+                var totalPagar = (entradaDia * 30) + (entrada2dias * 45) + (entradaCompleto * 50) + (cantCamisas * 10) * 0.93 + (cantEtiquetas * 2);
 
                 var listadoProductos = [];
 
@@ -142,6 +144,9 @@ function initMap() {
                 }
 
                 suma.innerHTML = '$ ' + totalPagar.toFixed(2);
+
+                botonRegistro.disabled = false;
+                document.getElementById('total_pedido').value = totalPagar;
             }
         }
 
