@@ -1119,6 +1119,7 @@ div.dia i{
 }
 
 /* Colorbox */
+#cboxOverlay { background-color: gray;}
 div#cboxContent{
   text-align: center;
 }
