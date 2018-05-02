@@ -1,6 +1,6 @@
 <?php
 
-if (!isset($_POST['producto'], $_POST['precio'])) {
+if (!isset($_POST['submit'])) {
   exit("Algo ha ido mal");
 }
 
@@ -13,14 +13,43 @@ use PayPal\Api\Transaction;
 use PayPal\Api\RedirectUrls;
 use PayPal\Api\Payment;
 
-require 'paypal.php';
+require 'includes/paypal.php';
 
-$producto = htmlspecialchars($_POST['producto']);
-$precio = htmlspecialchars($_POST['precio']);
-$precio = (int) $precio;
-$envio = 0;
-$total = $precio + $envio;
+if (isset($_POST['submit'])) {
+  $nombre = $_POST['nombre'];
+  $apellido = $_POST['apellido'];
+  $email = $_POST['email'];
+  $regalo = $_POST['regalo'];
+  $total = $_POST['total_pedido'];
+  $fecha = date('Y-m-d H:i:s');
+  //Pedidos
+  $entradas = $_POST['entradas'];
+  $camisas = $_POST['pedidos_extra']['camisas']['cantidad'];
+  $precioCamisa = $_POST['pedidos_extra']['camisas']['precio'];
+  $etiquetas = $_POST['pedidos_extra']['etiquetas']['cantidad'];
+  $precioEtiquetas = $_POST['pedidos_extra']['etiquetas']['precio'];
+  include_once 'includes/funciones/funciones.php';
+  $pedido = productos_json($entradas, $camisas, $etiquetas);
+  //eventos
+  $eventos = $_POST['registro'];
+  $registro = eventos_json($eventos);
 
+  exit;
+}
+try {
+  require_once('includes/funciones/bd_conexion.php');
+  $stmt = $db->prepare("INSERT INTO registrados (nombre_registrado, apellido_registrado, email_registrado, fecha_registro, pases_articulos, talleres_registrados, regalo, total_pagado) VALUES (?,?,?,?,?,?,?,?)");
+  $stmt->bind_param("ssssssis", $nombre, $apellido, $email, $fecha, $pedido, $registro, $regalo, $total);
+  $stmt->execute();
+  $stmt->close();
+  $db->close();
+  header('Location: validar_registro.php?exitoso=1');
+} catch (\Exception $e) {
+  echo $e->getMessage();
+}
+
+
+/*
 $compra = new Payer();
 $compra->setPaymentMethod('paypal');
 
@@ -69,5 +98,7 @@ try {
 $aprobado = $pago->getApprovalLink();
 
 header("Location: {$aprobado}");
+
+*/
 
  ?>
