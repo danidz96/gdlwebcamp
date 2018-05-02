@@ -2,7 +2,7 @@
 
     <section class="seccion contenedor">
         <h2>Registro de usuarios</h2>
-        <form  id="registro" class="registro" action="validar_registro.php" method="post">
+        <form  id="registro" class="registro" action="pagar.php" method="post">
             <div id="datos-usuarios" class="registro caja clearfix">
                 <div class="campo">
                     <label for="nombre">Nombre: </label>
