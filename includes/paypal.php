@@ -1,6 +1,6 @@
 <?php
 
-require 'paypal/autoload.php';
+require 'includes/paypal/autoload.php';
 
 define('URL_SITIO', 'http://localhost/gdlwebcamp');
 
