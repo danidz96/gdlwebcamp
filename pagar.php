@@ -64,10 +64,12 @@ $articulo->setName($producto)
          ->setPrice($precio);
 
 $i = 0;
+$array_pedido = array();
 foreach ($numeroEntradas as $key => $value) {
   if ((int)$value['cantidad' > 0]) {
 
     ${"articulo$i"} = new Item();
+    $array_pedido[] = ${"articulo$i"};
     ${"articulo$i"}->setName('Pase:' . $key)
                  ->setCurrency('EUR')
                  ->setQuantity((int) $value['cantidad'])
@@ -84,6 +86,7 @@ foreach ($pedidoExtra as $key => $value) {
       $precio = (int) $value ['precio'];
     }
     ${"articulo$i"} = new Item();
+    $array_pedido[] = ${"articulo$i"};
     ${"articulo$i"}->setName('Extras:' . $key)
                  ->setCurrency('EUR')
                  ->setQuantity((int) $value['cantidad'])
@@ -93,9 +96,11 @@ foreach ($pedidoExtra as $key => $value) {
 }
 
 
-/*
+
 $listaArticulos = new ItemList();
-$listaArticulos->setItems(array($articulo));
+$listaArticulos->setItems($array_pedido);
+
+/*
 $detalles = new Details();
 $detalles->setShipping($envio)
          ->setSubtotal($precio);

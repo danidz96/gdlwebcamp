@@ -22,8 +22,8 @@
     $stmt->close();
     $db->close();
     header('Location: validar_registro.php?exitoso=1');
-  } catch (\Exception $e) {
-    echo $e->getMessage();
+  } catch (Exception $e) {
+    $error = $e->getMessage();
   }
   ?>
 <?php } ?>
