@@ -36,16 +36,13 @@ if (isset($_POST['submit'])) {
   $eventos = $_POST['registro'];
   $registro = eventos_json($eventos);
 
-echo "<pre>";
-  var_dump($pedidoExtra);
-echo "</pre>";
-
 
 try {
   require_once('includes/funciones/bd_conexion.php');
   $stmt = $db->prepare("INSERT INTO registrados (nombre_registrado, apellido_registrado, email_registrado, fecha_registro, pases_articulos, talleres_registrados, regalo, total_pagado) VALUES (?,?,?,?,?,?,?,?)");
   $stmt->bind_param("ssssssis", $nombre, $apellido, $email, $fecha, $pedido, $registro, $regalo, $total);
   $stmt->execute();
+  $ID_registro = $stmt->insert_id;
   $stmt->close();
   $db->close();
   //header('Location: validar_registro.php?exitoso=1');
@@ -100,25 +97,19 @@ foreach ($pedidoExtra as $key => $value) {
 $listaArticulos = new ItemList();
 $listaArticulos->setItems($array_pedido);
 
-/*
-$detalles = new Details();
-$detalles->setShipping($envio)
-         ->setSubtotal($precio);
-
 $cantidad = new Amount();
 $cantidad->setCurrency('EUR')
-         ->setTotal($precio)
-         ->setDetails($detalles);
+         ->setTotal($total);
 
 $transaccion = new Transaction();
 $transaccion->setAmount($cantidad)
             ->setItemList($listaArticulos)
-            ->setDescription('Pago ')
-            ->setInvoiceNumber(uniqid());
+            ->setDescription('Pago GLDWEBCAMP')
+            ->setInvoiceNumber($ID_registro);
 
 $redireccionar = new RedirectUrls();
-$redireccionar->setReturnUrl(URL_SITIO . "/pago_finalizado.php?exito=true")
-              ->setCancelUrl(URL_SITIO. "/pago_finalizado.php?exito=false");
+$redireccionar->setReturnUrl(URL_SITIO . "/pago_finalizado.php?exito=true&id_pago={$ID_registro}")
+              ->setCancelUrl(URL_SITIO. "/pago_finalizado.php?exito=false&id_pago={$ID_registro}");
 
 $pago = new Payment();
 $pago->setIntent("sale")
@@ -132,13 +123,13 @@ try {
   echo "<pre>";
   print_r(json_decode($pce->getData()));
   exit;
-  echo "<pre>";
+  echo "</pre>";
 }
 
 $aprobado = $pago->getApprovalLink();
 
 header("Location: {$aprobado}");
 
-*/
+
 
  ?>
