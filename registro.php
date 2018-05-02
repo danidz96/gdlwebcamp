@@ -155,13 +155,13 @@
                         <div class="extras">
                             <div class="orden">
                                 <label for="camisa_evento">Camisa del evento $10 <small>(promoción 7% dto.)</small></label> <br>
-                                <input type="number" name="pedidos_extra[camisas][cantidad]" id="camisa_evento" size="3" min="0" placeholder="0">
-                                <input type="hidden" name="pedidos_extra[camisas][precio]" value="10">
+                                <input type="number" name="pedido_extra[camisas][cantidad]" id="camisa_evento" size="3" min="0" placeholder="0">
+                                <input type="hidden" name="pedido_extra[camisas][precio]" value="10">
                             </div>
                             <div class="orden">
                                 <label for="etiquetas">Paquetes de 10 etiquetas $2(HTML5, CSS3, JavaScript)</label> <br>
-                                <input type="number" name="pedidos_extra[etiquetas][cantidad]" id="etiquetas" size="3" min="0" placeholder="0">
-                                <input type="hidden" name="pedidos_extra[etiquetas][precio]" value="2">
+                                <input type="number" name="pedido_extra[etiquetas][cantidad]" id="etiquetas" size="3" min="0" placeholder="0">
+                                <input type="hidden" name="pedido_extra[etiquetas][precio]" value="2">
                             </div>
                             <div class="orden">
                                 <label for="regalo">Seleccione un regalo</label> <br> <br>
