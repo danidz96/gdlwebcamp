@@ -9,7 +9,7 @@ include_once'templates/header.php';
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <form role="form" name="login-admin-form" id="login-admin" method="post" action="insertar-admin.php">
+    <form name="login-admin-form" id="login-admin" method="post" action="insertar-admin.php">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" name="usuario" placeholder="Usuario">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>

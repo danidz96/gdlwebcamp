@@ -39,6 +39,20 @@ $(document).ready(function () {
       success: function (data) {
         var resultado = data;
         console.log(resultado);
+        var resultado = data;
+        if (resultado.respuesta == 'exito') {
+          swal(
+            'Login Correcto',
+            'Bienvenid@ ' + resultado.usuario+'!!',
+            'success'
+          );
+        }else {
+          swal({
+            type: 'error',
+            title: 'Oops...',
+            text: 'Algo ha ido mal!'
+          });
+        }
       }
     });
   });

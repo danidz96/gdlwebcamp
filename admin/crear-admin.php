@@ -28,7 +28,7 @@ include_once'templates/aside.php';
         </div>
         <div class="box-body">
           <!-- form start -->
-          <form role="form" name="crear-admin" id="crear-admin" method="post" action="insertar-admin.php">
+          <form name="crear-admin" id="crear-admin" method="post" action="insertar-admin.php">
             <div class="box-body">
               <div class="form-group">
                 <label for="usuario">Usuario</label>
