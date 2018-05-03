@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="css/AdminLTE.min.css">
+  <!-- sweetalert2 -->
+  <link rel="stylesheet" href="css/sweetalert2.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="css/skins/_all-skins.min.css">
