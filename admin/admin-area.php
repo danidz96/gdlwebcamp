@@ -3,9 +3,6 @@ include_once'templates/header.php';
 include_once'templates/barra.php';
 include_once'templates/aside.php';
 ?>
-<body class="hold-transition skin-blue sidebar-mini">
-<!-- Site wrapper -->
-<div class="wrapper">
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
