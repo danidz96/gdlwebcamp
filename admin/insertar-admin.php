@@ -1,4 +1,11 @@
 <?php
+include_once'funciones/funciones.php';
+
+if($db->ping()){
+  echo "conectado";
+}else {
+  echo "0";
+}
 
 if (isset($_POST['agregar-admin'])) {
   $usuario = $_POST['usuario'];
@@ -11,7 +18,6 @@ if (isset($_POST['agregar-admin'])) {
 
   $password_hashed = password_hash($password, PASSWORD_BCRYPT, $opciones); //encriptación contraseña
 
-  echo $password_hashed;
 }
 
 // echo "<pre>";
