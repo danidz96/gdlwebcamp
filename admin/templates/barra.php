@@ -32,8 +32,8 @@
             <li class="user-header">
               <img src="img/user2-160x160.jpg" class="img-circle" alt="User Image">
               <p>
-                Alexander Pierce - Web Developer
-                <small>Member since Nov. 2012</small>
+                Dani Domínguez - Web Developer
+                <small>Member since May. 2018</small>
               </p>
             </li>
             <!-- Menu Footer-->
