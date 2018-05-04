@@ -1,6 +1,10 @@
 <?php
-include_once'funciones/funciones.php';
-include_once'templates/header.php';
+  session_start();
+  if(isset($_GET['cerrar_sesion'])) {
+  session_destroy();
+  }
+  include_once'funciones/funciones.php';
+  include_once'templates/header.php';
 ?>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -9,14 +13,6 @@ include_once'templates/header.php';
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <?php
-
-    session_start();
-    echo "<pre>";
-      var_dump($_SESSION);
-    echo "</pre>";
-
-     ?>
     <form name="login-admin-form" id="login-admin" method="post" action="insertar-admin.php">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" name="usuario" placeholder="Usuario">
