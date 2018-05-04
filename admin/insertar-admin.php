@@ -59,6 +59,9 @@ try {
     $existe = $stmt->fetch();
     if ($existe) {
       if(password_verify($password, $password_admin)){
+        session_start();
+        $_SESSION['usuario'] = $usuario_admin;
+        $_SESSION['nombre'] = $nombre_admin;
         $respuesta = array(
           'respuesta' => 'exito',
           'usuario' => $nombre_admin
@@ -72,7 +75,8 @@ try {
     $respuesta = array(
       'respuesta' => 'error');
   }
-
+  $stmt->close();
+  $db->close();
     } catch (Exception $e) {
   echo "Error: " . $e->getMessage;
 }
