@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="css/AdminLTE.min.css">
   <!-- sweetalert2 -->
   <link rel="stylesheet" href="css/sweetalert2.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
 
   <link rel="stylesheet" href="css/admin.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins

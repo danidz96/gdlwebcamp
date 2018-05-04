@@ -23,11 +23,15 @@
 <script src="js/demo.js"></script>
 <!-- sweetalert2 -->
 <script src="js/sweetalert2.min.js"></script>
+<!-- DataTables -->
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/dataTables.bootstrap.min.js"></script>
 <script src="js/admin-ajax.js"></script>
+<script src="js/app.js"></script>
 <script>
   $(document).ready(function () {
-    $('.sidebar-menu').tree()
-  })
+
+  });
 </script>
 
 </body>
