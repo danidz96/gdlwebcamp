@@ -6,13 +6,12 @@ if($db->ping()){
   echo "0";
 }*/
 include_once 'funciones/funciones.php';
-$usuario = $_POST['usuario'];
-$nombre = $_POST['nombre'];
-$password = $_POST['password'];
 
 
 if ($_POST['registro'] == 'nuevo') {
-
+  $usuario = $_POST['usuario'];
+  $nombre = $_POST['nombre'];
+  $password = $_POST['password'];
   $opciones = array(
     'cost' => 12
   );
@@ -46,7 +45,9 @@ die(json_encode($respuesta));
 }
 
 if($_POST['registro'] == 'actualizar'){
-
+  $usuario = $_POST['usuario'];
+  $nombre = $_POST['nombre'];
+  $password = $_POST['password'];
     try {
         if(empty($_POST['password']) ) {
             $stmt = $db->prepare("UPDATE admins SET usuario = ?, nombre = ?, editado = NOW()  WHERE id_admin = ? ");
@@ -82,6 +83,33 @@ if($_POST['registro'] == 'actualizar'){
     die(json_encode($respuesta));
 
 }
+
+if($_POST['registro'] == 'eliminar'){
+
+    $id_borrar = $_POST['id'];
+
+    try {
+        $stmt = $db->prepare("DELETE FROM admins WHERE id_admin = ?");
+        $stmt->bind_param('i', $id_borrar);
+        $stmt->execute();
+        if($stmt->affected_rows) {
+            $respuesta = array(
+                'respuesta' => 'exito',
+                'id_eliminado' => $id_borrar
+            );
+        } else {
+            $respuesta = array(
+                'respuesta' => 'error'
+            );
+        }
+    } catch (Exception $e) {
+        $respuesta = array(
+            'respuesta' => $e->getMessage()
+        );
+    }
+    die(json_encode($respuesta));
+}
+
 if (isset($_POST['login-admin'])) {
   $usuario= $_POST['usuario'];
   $password= $_POST['password'];
