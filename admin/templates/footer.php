@@ -28,11 +28,6 @@
 <script src="js/dataTables.bootstrap.min.js"></script>
 <script src="js/admin-ajax.js"></script>
 <script src="js/app.js"></script>
-<script>
-  $(document).ready(function () {
-
-  });
-</script>
 
 </body>
 </html>
