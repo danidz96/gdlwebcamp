@@ -25,21 +25,21 @@
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <img src="img/user2-160x160.jpg" class="user-image" alt="User Image">
-            <span class="hidden-xs">Admin</span>
+            <span class="hidden-xs"><?php echo $_SESSION['nombre']; ?></span>
           </a>
           <ul class="dropdown-menu">
             <!-- User image -->
             <li class="user-header">
               <img src="img/user2-160x160.jpg" class="img-circle" alt="User Image">
               <p>
-                Dani Domínguez - Web Developer
+                <?php echo $_SESSION['nombre']; ?> - Web Developer
                 <small>Member since May. 2018</small>
               </p>
             </li>
             <!-- Menu Footer-->
             <li class="user-footer">
               <div class="pull-left">
-                <a href="#" class="btn btn-default btn-flat">Ajustes</a>
+                <a href="editar-admin.php?id=<?php echo $_SESSION['id']; ?>" class="btn btn-default btn-flat">Ajustes</a>
               </div>
               <div class="pull-right">
                 <a href="login.php?cerrar_sesion=true" class="btn btn-default btn-flat">Cerrar sesión</a>

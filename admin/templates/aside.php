@@ -3,11 +3,12 @@
   <section class="sidebar">
     <!-- Sidebar user panel -->
     <div class="user-panel">
+
       <div class="pull-left image">
         <img src="img/user2-160x160.jpg" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
-        <p>Dani Domínguez</p>
+        <p><?php echo $_SESSION['nombre']; ?></p>
         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
       </div>
     </div>
@@ -88,6 +89,7 @@
           <li><a href="#"><i class="fa fa-plus"></i> Agregar</a></li>
         </ul>
       </li>
+      <?php  if ($_SESSION['nivel'] == 1) { ?>
       <li class="treeview">
         <a href="#">
           <i class="fa fa-user"></i>
@@ -101,6 +103,7 @@
           <li><a href="crear-admin.php"><i class="fa fa-plus"></i> Agregar</a></li>
         </ul>
       </li>
+      <?php } ?>
       <li class="treeview">
         <a href="#">
           <i class="fa fa-comments"></i>
