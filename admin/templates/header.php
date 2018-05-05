@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
   <link rel="stylesheet" href="css/bootstrap-timepicker.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
   <link rel="stylesheet" href="css/admin.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->

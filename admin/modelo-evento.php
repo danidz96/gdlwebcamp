@@ -49,6 +49,31 @@ if($_POST['registro'] == 'nuevo'){
 
 if($_POST['registro'] == 'actualizar'){
 
+    try {
+        $stmt = $db->prepare('UPDATE eventos SET nombre_evento = ?, fecha_evento = ?, hora_evento = ?, id_cat_evento = ?, id_inv = ?, editado = NOW() WHERE id_event = ? ');
+        $stmt->bind_param('sssiii', $titulo, $fecha_formateada, $hora_formateada, $categoria_id, $invitado_id, $id_registro );
+        $stmt->execute();
+        if($stmt->affected_rows) {
+            $respuesta = array(
+                'respuesta' => 'exito',
+                'id_actualizado' => $id_registro
+            );
+        } else {
+            $respuesta = array(
+                'respuesta' => 'error'
+            );
+        }
+
+        $stmt->close();
+        $conn->close();
+    } catch (Exception $e) {
+        $respuesta = array(
+            'respuesta' => $e->getMessage()
+        );
+    }
+
+    die(json_encode($respuesta));
+
 }
 
 if($_POST['registro'] == 'eliminar'){
