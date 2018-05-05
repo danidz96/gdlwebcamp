@@ -36,4 +36,13 @@ $(document).ready(function() {
             $('input#password').parents('.form-group').addClass('has-error').removeClass('has-success');
         }
     });
+
+    //date picker
+    $('#fecha').datepicker({
+      autoclose: true
+    });
+
+    $('.timepicker').timepicker({
+      showInputs: false
+    });
 });
