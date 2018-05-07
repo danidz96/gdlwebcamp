@@ -7,14 +7,7 @@
     </div>
     <div class="ultimos-tweets">
       <h3>últimos <span>tweets</h3>
-        <ul>
-          <li>Sed eget risus ligula. Praesent neque diam,
-          faucibus eget ante non, malesuada rutrum leo.</li>
-          <li>Sed eget risus ligula. Praesent neque diam,
-          faucibus eget ante non, malesuada rutrum leo.</li>
-          <li>Sed eget risus ligula. Praesent neque diam,
-          faucibus eget ante non, malesuada rutrum leo.</li>
-        </ul>
+        <a class="twitter-timeline" data-height="400" data-theme="light" data-link-color="#fe4918" href="https://twitter.com/dani170596?ref_src=twsrc%5Etfw">Tweets by dani170596</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     <div class="menu">
       <h3>Redes <span>sociales</h3>
