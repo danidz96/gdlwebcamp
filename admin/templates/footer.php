@@ -32,6 +32,7 @@
 <script src="js/admin-ajax.js"></script>
 <script src="js/login-ajax.js"></script>
 <script src="js/app.js"></script>
+<script src="../js/cotizador.js"></script>
 
 </body>
 </html>

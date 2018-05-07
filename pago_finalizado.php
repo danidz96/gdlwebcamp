@@ -8,7 +8,7 @@
       if ($resultado == "true") {
         $paymentId = $_GET['paymentId'];
         $id_pago = (int)$_GET['id_pago'];
-        echo "El resultado se realizo correctamente </br>";
+        echo "El pago se realizo correctamente </br>";
         echo "El ID es {$paymentId}";
 
         require_once('includes/funciones/bd_conexion.php');

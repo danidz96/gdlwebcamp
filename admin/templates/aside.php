@@ -86,7 +86,7 @@
         </a>
         <ul class="treeview-menu">
           <li><a href="lista-registrados.php"><i class="fa fa-list"></i> Ver Todos</a></li>
-          <li><a href="crear-registrado.php"><i class="fa fa-plus"></i> Agregar</a></li>
+          <li><a href="crear-registro.php"><i class="fa fa-plus"></i> Agregar</a></li>
         </ul>
       </li>
       <?php  if ($_SESSION['nivel'] == 1) { ?>

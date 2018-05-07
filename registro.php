@@ -75,6 +75,44 @@
                 <div id="eventos" class="eventos clearfix">
                     <h3>Elige tus talleres</h3>
                     <div class="caja">
+                      <?php
+                                  // try {
+                                  //     require_once('includes/funciones/bd_conexion.php');
+                                  //     $sql = "SELECT eventos.*, categoria_evento.cat_evento, invitados.nombre_invitado, invitados.apellido_invitado ";
+                                  //     $sql .= " FROM eventos ";
+                                  //     $sql .= " JOIN categoria_evento ";
+                                  //     $sql .= " ON eventos.id_cat_evento = categoria_evento.id_categoria ";
+                                  //     $sql .= " JOIN invitados ";
+                                  //     $sql .= " ON eventos.id_inv = invitados.id_invitado ";
+                                  //     $sql .= " ORDER BY eventos.fecha_evento, eventos.id_cat_evento, eventos.hora_evento ";
+                                  //     $resultado = $db->query($sql);
+                                  // } catch (Exception $e) {
+                                  //     echo $e->getMessage();
+                                  // }
+                                  //
+                                  // $eventos_dias = array();
+                                  //
+                                  // while($eventos = $resultado->fetch_assoc()) {
+                                  //
+                                  //     $fecha = $eventos['fecha_evento'];
+                                  //     setlocale(LC_ALL, 'spanish');
+                                  //     $dia_semana = strftime("%A", strtotime($fecha));
+                                  //     $categoria = $eventos['cat_evento'];
+                                  //     $dia = array(
+                                  //         'nombre_evento' => $eventos['nombre_evento'],
+                                  //         'hora' => $eventos['hora_evento'],
+                                  //         'id' => $eventos['id_evento'],
+                                  //         'nombre_invitado' => $eventos['nombre_invitado'],
+                                  //         'apellido_invitado' => $eventos['apellido_invitado']
+                                  //     );
+                                  //     $eventos_dias[$dia_semana]['eventos'][$categoria][] = $dia;
+                                  // }
+                                  // echo "<pre>";
+                                  // var_dump($eventos);
+                                  // echo "</pre>";
+
+                              ?>
+
                         <div id="viernes" class="contenido-dia clearfix">
                             <h4>Viernes</h4>
                             <div>
@@ -143,7 +181,6 @@
                                 <label><input type="checkbox" name="registro[]" id="sem_05" value="sem_05"><time>17:00</time> Creando una App en iOS en una tarde</label>
                             </div>
                         </div>
-                        <!--#domingo-->
                     </div>
                     <!--.caja-->
                 </div>
