@@ -1,3 +1,19 @@
+<?php
+    // Definir un nombre para cachear
+    $archivo = basename($_SERVER['PHP_SELF']);
+    $pagina = str_replace(".php", "", $archivo);
+    // Definir archivo para cachear (puede ser .php también)
+	$archivoCache = 'cache/'.$pagina.'.php';
+	// Cuanto tiempo deberá estar este archivo almacenado
+	$tiempo = 36000;
+	// Comprobar que el archivo exista, el tiempo sea el adecuado y muestralo
+	if (file_exists($archivoCache) && time() - $tiempo < filemtime($archivoCache)) {
+   	include($archivoCache);
+    	exit;
+	}
+	// Si el archivo no existe, o el tiempo de cacheo ya se acabó genera uno nuevo
+	ob_start();
+?>
 <!doctype html>
 <html lang="es">
 
@@ -12,7 +28,7 @@
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
     <link <link href="https://fonts.googleapis.com/css?family=Anton|Open+Sans|Oswald|PT+Sans|Roboto" rel="stylesheet">
 
