@@ -51,12 +51,13 @@
                                                     <?php
                                                         try {
                                                             $categoria_actual = $evento['id_cat_evento'];
-                                                            $sql = "SELECT * FROM categoria_evento ";
+
+                                                            $sql = "SELECT * FROM categoria_evento";
                                                             $resultado = $db->query($sql);
                                                             while($cat_evento = $resultado->fetch_assoc()) {
                                                                 if($cat_evento['id_categoria'] == $categoria_actual) { ?>
                                                                     <option value="<?php echo $cat_evento['id_categoria']; ?>" selected>
-                                                                        <?php echo $cat_evento['cat_evento']; ?>
+                                                                        <?php  echo $cat_evento['cat_evento']; ?>
                                                                     </option>
                                                                 <?php } else { ?>
                                                                     <option value="<?php echo $cat_evento['id_categoria']; ?>" >
@@ -72,8 +73,6 @@
                                                     ?>
                                           </select>
                                     </div>
-
-
                                     <div class="form-group">
                                           <label>Fecha Evento:</label>
                                           <?php
@@ -81,7 +80,6 @@
                                                 $fecha_formato = date('m/d/Y', strtotime($fecha));
 
                                           ?>
-
                                           <div class="input-group date">
                                                 <div class="input-group-addon">
                                                     <i class="fa fa-calendar"></i>
@@ -90,7 +88,6 @@
                                           </div>
                                           <!-- /.input group -->
                                     </div>
-
                                     <div class="bootstrap-timepicker">
                                           <div class="form-group">
                                                 <label>Hora:</label>
