@@ -45,6 +45,7 @@ die(json_encode($respuesta));
 }
 
 if($_POST['registro'] == 'actualizar'){
+  $id_registro = $_POST['id_registro'];
   $usuario = $_POST['usuario'];
   $nombre = $_POST['nombre'];
   $password = $_POST['password'];
